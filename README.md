@@ -1,5 +1,6 @@
 # Quote-Generator
-Random quote generator which constructs quotes by assembling different pieces of a sentence.  
+Random quote generator which constructs quotes by assembling different pieces of a sentence.    
+View demo [Quotation Generator](https://emmanuel-melon.github.io/Quote-Generator/) 
 ## Objectives: This app will be built in two steps  
 ### Step 1:  
 - [ ] The quotes are generated randomly one by one with each JavaScript call  
