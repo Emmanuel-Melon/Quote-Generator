@@ -7,61 +7,82 @@
   <meta name="author" content="Emmanuel-Melon">
   <!-- custom styles -->
   <link rel="stylesheet" href="css/custom.css">
+  <!-- reset styles -->
+  <link rel="stylesheet" href="css/reset.css">
   <!-- google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Acme|Assistant" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Adamina|Dosis" rel="stylesheet">
   <!-- font awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <title>Quote Generator</title>
 </head>
 <body>
-  <header>
-    <nav class="centered">
-      <ul class="navbar">
-        <li class="nav-link">Home</li>
-        <li class="nav-link">Description</li>
-        <li class="nav-link">About</li>
-      </ul>
-    </nav>
-  </header>
-  <div id="wrapper">
-    <section id="left" class="centered">
+  <section id="wrapper">
+    <aside id="left" class="centered">
       <div>
         <div class="img-container">
-          <h3 class="sub-heading text-center">Random quote generator</h3>
-          <img src="./img/356410-PAXWWE-157.jpg" alt="">
+          <img src="./img/16469.jpg" alt="buddha">
         </div>
-        <form action="" class="form">
-          <div class="form-group">
-            <p>Quotation style</p>
-            <input type="radio" id="science" name="drone" value="huey">
-            <label for="science">Happy</label>
-            <input type="radio" id="science" name="drone" value="huey">
-            <label for="science">Evil</label>
+        <h1 id="main-heading" class="text-center">Quote Generator</h1>
+        <div id="customize">
+          <div class="centered">
+            <div>
+              <p>Click here to customize quotes</p>
+              <button class="button ghost">Customize</button>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="range">Number of quotes</label>
-            <input type="range" id="range" name="drone" value="huey" class="range">
-          </div>
-        </form>
+          <form action="" class="form">
+            <div class="form-group">
+              <button class="radio-button">Happy Quotes</button>
+              <button class="radio-button active">Evil Quotes</button>
+            </div>
+            <div class="form-group">
+              <label for="range">Number of quotes</label>
+              <input type="range" id="range" name="drone" value="huey" class="range">
+            </div>
+          </form>
+        </div>
       </div>
-    </section>
-    <section id="right" class="centerd">
+    </aside>
+    <aside id="right" class="centered">
       <div>
-        <h1 id="main-heading">Content</h1>
-        <p>Click to generate a new quotation</p>
-        <button class="button">Generate</button>
-        <h3 class="sub-heading">List of quotations</h3>
-        <blockquote>"Ghetto mythologies colonize my mind constantly to shine sonically in the Chi divine comedy."</blockquote>
-        <blockquote>"Ghetto mythologies colonize my mind constantly to shine sonically in the Chi divine comedy."</blockquote>
-        <blockquote>"Ghetto mythologies colonize my mind constantly to shine sonically in the Chi divine comedy."</blockquote>
-        <blockquote>"Ghetto mythologies colonize my mind constantly to shine sonically in the Chi divine comedy."</blockquote>
-        <blockquote>"Ghetto mythologies colonize my mind constantly to shine sonically in the Chi divine comedy."</blockquote>
+        <div>
+          <div class="quote centered">
+            <article>
+              <blockquote>We are shaped by our thoughts; we become what we think. When the mind is pure, joy follows like a shadow that never leaves.</blockquote>
+              <hr class="styled">
+            </article>
+          </div>
+          <div class="quote centered">
+            <article>
+              <blockquote>We are shaped by our thoughts; we become what we think. When the mind is pure, joy follows like a shadow
+                that never leaves.</blockquote>
+              <hr class="styled">
+            </article>
+          </div>
+          <div class="quote centered">
+            <article>
+              <blockquote>We are shaped by our thoughts; we become what we think. When the mind is pure, joy follows like a shadow
+                that never leaves.</blockquote>
+              <hr class="styled">
+            </article>
+          </div>
+          <div class="quote centered">
+            <article>
+              <blockquote>We are shaped by our thoughts; we become what we think. When the mind is pure, joy follows like a shadow
+                that never leaves.</blockquote>
+              <hr class="styled">
+            </article>
+          </div>
+          <div class="quote centered">
+            <article>
+              <blockquote>We are shaped by our thoughts; we become what we think. When the mind is pure, joy follows like a shadow
+                that never leaves.</blockquote>
+            </article>
+          </div>
+        </div>
       </div>
-    </section>
-  </div>
-  <footer class="centered">
-    <p>OpenClassrooms &copy; 2018 </p>
-  </footer>
+    </aside>
+  </section>
 </body>
 </html>
