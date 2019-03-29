@@ -2,10 +2,15 @@ html, body {
   margin: 0;
   padding: 0;
   color: #524f4f;
+  background-image: url("../img/leaves.png");
+  padding: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 blockquote {
-  color: #00080A;
+  color: #515353;
 }
 
 /* button */
@@ -16,6 +21,10 @@ blockquote {
   border-radius: 1.5em;
   color: aliceblue;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.button:focus {
+  outline: none;
 }
 
 .ghost {
@@ -170,7 +179,7 @@ img {
 }
 
 .img-container {
-  max-width: 350px;
+  max-width: 300px;
 }
 
 /* radio input */
@@ -203,7 +212,7 @@ background: linear-gradient(to right, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, F
 }
 
 #right {
-  background: #f3eded;
+  background: #f8f6f6;
   border-left: solid 0.2em #f69454;
   flex: 2;
 }
@@ -233,10 +242,12 @@ section {
 /* wrapper */
 #wrapper {
   display: flex;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  width: 85vw;
 }
 
 #customize {
-  padding: 1.5em;
+  padding: 0.5em;
 }
 
 .quote {
