@@ -34,8 +34,8 @@
           <div class="centered">
             <div>
               <p class="text-center">Generate or customize quotes</p>
-              <button class="button active">Generate</button>
-              <button class="button ghost">Customize</button>
+              <button class="button active" id="generate">Generate</button>
+              <button class="button ghost" id="customize">Customize</button>
             </div>
           </div>
           <form action="" class="form">
@@ -56,49 +56,19 @@
         <div class="centered">
           <div>
             <h1 class="main-heading">Quote Generator</h1>
-            <h3 class="green text-center">Buddha Quotes</h3>
+            <h3 id="quoteType"></h3>
           </div>
         </div>
-        <div>
-          <div class="quote centered">
-            <article>
-              <blockquote> <span class="quotation-mark">"</span> Long is the night to him who is awake; long is a mile to him who is tired; long is life to the foolish who do not know
-              the true law.<span class="quotation-mark">"</span> - Buddha</blockquote>
-              <hr class="styled">
-            </article>
-          </div> <!-- quote -->
-          <div class="quote centered">
-            <article>
-              <blockquote> <span class="quotation-mark">"</span> We are shaped by our thoughts; we become what we think. When the
-                mind is pure, joy follows like a shadow that never leaves.<span class="quotation-mark">"</span> - Buddha
-              </blockquote>
-              <hr class="styled">
-            </article>
-          </div> <!-- quote -->
-          <div class="quote centered">
-            <article>
-              <blockquote> <span class="quotation-mark">"</span> The one in whom no longer exist the craving and thirst that perpetuate becoming; how could you track that Awakened one,
-              trackless, and of limitless range.<span class="quotation-mark">"</span> - Buddha
-              </blockquote>
-              <hr class="styled">
-            </article>
-          </div> <!-- quote -->
-          <div class="quote centered">
-            <article>
-              <blockquote> <span class="quotation-mark">"</span> If you propose to speak always ask yourself, is it true, is it necessary, is it kind.<span class="quotation-mark">"</span> - Buddha
-              </blockquote>
-              <hr class="styled">
-            </article>
-          </div> <!-- quote -->
-          <div class="quote centered">
-            <article>
-              <blockquote> <span class="quotation-mark">"</span> Ardently do today what must be done. Who knows? Tomorrow, death comes.<span class="quotation-mark">"</span> - Buddha
-              </blockquote>
-            </article>
-          </div> <!-- quote -->
+        <div id="quotes">
+          <div class="info centered">
+            <p class="text-center">Click on generate to add new quotes or you could customize your quotes by choosing the style and number of quotes to display.</p>
+          </div>
         </div>
       </div>
     </aside>
   </section>
+  <!-- scripts -->
+  <script src="js/quotes.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
