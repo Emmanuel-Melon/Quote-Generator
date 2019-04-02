@@ -1,0 +1,34 @@
+{
+  "name": "Quote-Generator",
+  "version": "1.0.0",
+  "description": "Random quote generator which constructs quotes by assembling different pieces of a sentence.     View demo [Quotation Generator](https://emmanuel-melon.github.io/Quote-Generator/)  ## Objectives: This app will be built in two steps   ### Step 1:   - [ ] The quotes are generated randomly one by one with each JavaScript call   - [ ] Each quote is a combination of at least 3 sentence fragments (it's up to you to create these sentence fragments: beginning, middle, and end)   - [ ] The quotes should be relatively coherent (no exclamation points in the middle of a sentence, for example)",
+  "main": "lib/js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emmanuel-Melon/Quote-Generator.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "HTML",
+    "CSS"
+  ],
+  "author": "Emmanuel-Melon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emmanuel-Melon/Quote-Generator/issues"
+  },
+  "homepage": "https://github.com/Emmanuel-Melon/Quote-Generator#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "babel-preset-flow": "^6.23.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.0"
+  }
+}
