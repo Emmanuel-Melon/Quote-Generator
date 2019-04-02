@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Emmanuel-Melon">
   <!-- reset styles -->
-  <link rel="stylesheet" href="src/css/reset.css">
+  <link rel="stylesheet" href="public/css/reset.css.css">
   <!-- custom styles -->
-  <link rel="stylesheet" href="src/css/custom.css">
+  <link rel="stylesheet" href="public/css/styles.css">
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Adamina|Dosis" rel="stylesheet">
   <!-- font awesome -->
@@ -19,19 +19,19 @@
 </head>
 <body>
   <section id="wrapper">
-    <aside id="left">
+    <aside id="sidebar">
       <div>
         <div id="info">
           <div class="centered info-image">
             <div class="img-container">
-              <img src="./img/16469.jpg" alt="buddha">
+              <img src="./public/img/16469.jpg" alt="buddha" id="buddha">
             </div>
           </div>
           <div class="centered">
             <p>version 1.0.0</p>
           </div>
         </div>
-        <div id="customize">
+        <div id="controls">
           <div class="centered">
             <div>
               <h2 class="sub-heading text-center" id="quoteType"></h2> <hr class="styled">
@@ -53,7 +53,7 @@
         </div>
       </div>
     </aside>
-    <aside id="right">
+    <section id="content">
       <div class="centered">
         <div>
           <h1 class="main-heading" id="main-heading">Random Quote Generator</h1>
@@ -63,7 +63,7 @@
       <ul id="quotes">
         <!-- quotes -->
       </ul>
-    </aside>
+    </section>
   </section>
   <!-- scripts -->
   <script src="src/js/helpers.js"></script>
