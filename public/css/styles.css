@@ -1,0 +1,303 @@
+/**
+imports
+ */
+/* centered */
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  font-family: "Adamina", Arial, Helvetica, sans-serif;
+}
+
+p, li, label, blockquote, button {
+  font-weight: 400;
+  font-family: "Dosis", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+blockquote {
+  color: #515353;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#main-heading {
+  font-size: 46px;
+}
+
+.main-heading {
+  font-size: 36px;
+  color: #ee693f;
+}
+
+.main-heading:after {
+  display: block;
+  content: "";
+  width: 35px;
+  border-bottom: solid 0.2em #739f3d;
+  border-radius: 0.2em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.sub-heading {
+  color: #0d0d0d;
+}
+
+.styled {
+  height: 6px;
+  background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
+  border: 0;
+}
+
+.info {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background: #fcfdfe;
+  padding: 1.5em;
+  border-radius: 0.2em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  text-align: center;
+  border-top: solid 0.3em #739f3d;
+}
+
+/* button */
+.button {
+  width: 150px;
+  padding: 0.5em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 1.5em;
+  margin: 0.2em;
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.active {
+  background: #739f3d;
+  border: solid 0.1em #739f3d;
+  color: #C9FFBF;
+}
+
+.active:hover {
+  background: #54831c;
+}
+
+.ghost {
+  border: solid 0.1em #f0f1dc;
+  background: #f0f1dc;
+  color: #ee693f;
+}
+
+.ghost:hover {
+  background: #ee693f;
+  color: #f0f1dc;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+/* radio input */
+input[type=radio] {
+  display: none;
+}
+
+.radio-button {
+  background: #f0f1dc;
+  padding: 1em;
+  border-radius: 1.5em;
+  width: 120px;
+}
+
+/* range input */
+input[type=range] {
+  background: transparent;
+  margin-top: 1.5em;
+  width: 100%;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+/* range thumb */
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 100%;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #f69454, 0px 0px 1px #0d0d0d;
+  background: #f69454;
+  border-radius: 1.3px;
+  border: 0.2px solid #fcfdfe;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #f69454, 0px 0px 1px #0d0d0d;
+  border: 1px solid #f69454;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #f69454;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #f69454, 0px 0px 1px #0d0d0d;
+  background: #f69454;
+  border-radius: 1.3px;
+  border: 0.2px solid #fcfdfe;
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #f69454, 0px 0px 1px #0d0d0d;
+  border: 1px solid #f69454;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #f69454;
+  border: 0.2px solid #fcfdfe;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #f69454, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #f69454;
+  border: 0.2px solid #fcfdfe;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #f69454, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #f69454, 0px 0px 1px #0d0d0d;
+  border: 1px solid #f69454;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #f69454;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #f69454;
+}
+
+.form {
+  display: none;
+}
+
+.form-control {
+  background: red;
+}
+
+.form-group {
+  margin: 1.5em;
+}
+
+#buddha {
+  height: auto;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.img-container {
+  max-width: 450px;
+}
+
+#content {
+  background-image: url("../../img/leaves.png");
+  background: #fcfdfe;
+  flex: 2;
+}
+
+#sidebar {
+  background: #C9FFBF;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #e78e52, #C9FFBF);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #e78e52, #C9FFBF);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  flex: 1;
+  padding: 2.5em;
+}
+
+/* wrapper */
+#wrapper {
+  display: flex;
+  padding: 0;
+}
+
+.quote {
+  padding: 0.5em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-left: solid 0.3em #739f3d;
+  border-radius: 0.2em;
+  background: #fcfdfe;
+  margin: 0.5em;
+}
+
+#quotes {
+  height: 600px;
+  overflow-y: scroll;
+}
+
+/*# sourceMappingURL=styles.css.map */
