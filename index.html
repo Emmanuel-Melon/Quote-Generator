@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Emmanuel-Melon">
-  <!-- custom styles -->
-  <link rel="stylesheet" href="css/custom.css">
   <!-- reset styles -->
   <link rel="stylesheet" href="css/reset.css">
+  <!-- custom styles -->
+  <link rel="stylesheet" href="css/custom.css">
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Adamina|Dosis" rel="stylesheet">
   <!-- font awesome -->
@@ -18,7 +18,7 @@
 </head>
 <body>
   <section id="wrapper">
-    <aside id="left" class="centered">
+    <aside id="left">
       <div>
         <div id="info">
           <div class="centered info-image">
@@ -33,6 +33,7 @@
         <div id="customize">
           <div class="centered">
             <div>
+              <h2 class="sub-heading text-center" id="quoteType"></h2> <hr class="styled">
               <p class="text-center">Generate or customize quotes</p>
               <button class="button active" id="generate">Generate</button>
               <button class="button ghost" id="customize">Customize</button>
@@ -51,23 +52,21 @@
         </div>
       </div>
     </aside>
-    <aside id="right" class="centered">
-      <div>
-        <div class="centered">
-          <div>
-            <h1 class="main-heading">Quote Generator</h1>
-            <h3 id="quoteType"></h3>
-          </div>
-        </div>
-        <div id="quotes">
-          <div class="info centered">
-            <p class="text-center">Click on generate to add new quotes or you could customize your quotes by choosing the style and number of quotes to display.</p>
-          </div>
+    <aside id="right">
+      <div class="centered">
+        <div>
+          <h1 class="main-heading" id="main-heading">Random Quote Generator</h1>
+          <p class="info">These quotes are totally random but may motivate you.</p>
         </div>
       </div>
+      <ul id="quotes">
+        <!-- quotes -->
+      </ul>
     </aside>
   </section>
   <!-- scripts -->
+  <script src="js/helpers.js"></script>
+  <script src="js/fragments.js"></script>
   <script src="js/quotes.js"></script>
   <script src="js/main.js"></script>
 </body>

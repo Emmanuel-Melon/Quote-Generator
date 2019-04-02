@@ -1,15 +1,13 @@
 html, body {
-  margin: 0;
-  color: #524f4f;
   background-image: url("../img/leaves.png");
-  padding: 0.5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 blockquote {
   color: #515353;
+}
+
+ul {
+  list-style-type: none;
 }
 
 /* button */
@@ -18,8 +16,8 @@ blockquote {
   padding: 0.5em;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   border-radius: 1.5em;
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-  margin: 0.5em;
+  margin: 0.2em;
+  transition: all 1s cubic-bezier(.25,.8,.25,1);
 }
 
 .button:focus {
@@ -32,10 +30,19 @@ blockquote {
   color: #C9FFBF;
 }
 
+.active:hover {
+  background: #54831c;
+}
+
 .ghost {
   border: solid 0.1em #f0f1dc;
   background: #f0f1dc;
   color: #ee693f;
+}
+
+.ghost:hover {
+  background: #ee693f;
+  color: #f0f1dc;
 }
 
 .button:hover {
@@ -60,7 +67,7 @@ p, li, label, blockquote, button {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  padding: 0;
 }
 
 .form {
@@ -185,7 +192,7 @@ img {
 }
 
 .img-container {
-  max-width: 300px;
+  max-width: 450px;
 }
 
 /* radio input */
@@ -201,20 +208,20 @@ input[type=radio] {
 }
 
 #left {
-background: #C9FFBF;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #e78e52, #C9FFBF);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #e78e52, #C9FFBF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #C9FFBF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #e78e52, #C9FFBF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #e78e52, #C9FFBF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   flex: 1;
-  padding: 2.5em;
+  padding: 1.5em;
 }
 
 #main-heading {
   font-size: 46px;
+  text-shadow: 0 1px 3px rgba(155, 143, 143, 0.19), 0 2px 4px rgba(0,0,0,0.23);
 }
 
 #right {
-  background: #f8f6f6;
+  background-image: url("../img/leaves.png");
   flex: 2;
 }
 
@@ -223,16 +230,6 @@ section {
   padding: 2.5em;
   display: flex;
   margin: 0;
-}
-
-.styled {
-	height: 6px;
-	background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
-  border: 0;
-}
-
-.styled:nth-last-child(4) {
-  display: none;
 }
 
 .main-heading {
@@ -255,23 +252,28 @@ section {
 /* wrapper */
 #wrapper {
   display: flex;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  width: 85vw;
+  box-shadow: 0 10px 20px rgba(155, 143, 143, 0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: 0;
 }
 
 #customize {
   padding: 0.5em;
 }
 
-#quoteType {
-  color: #739f3d;
-  text-align: center;
+.quote {
+  padding: 0.5em;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    border-left: solid 0.3em #739f3d;
+  border-radius: 0.2em;
+  background: #fcfdfe;
+  margin: 0.5em;
 }
 
-.quote {
-  margin-bottom: 0.5em;
-  padding: 0.5em;
-}
+/* disable for now */
+.quote:nth-of-type(1n+6) {
+  
+};
 
 .sub-heading {
   color: #0d0d0d;
@@ -279,4 +281,25 @@ section {
 
 .info {
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  background: #fcfdfe;
+  padding: 1.5em;
+  border-radius: 0.2em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  text-align: center;
+  border-top: solid 0.3em #739f3d;
+}
+
+#quotes {
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.styled {
+	height: 6px;
+	background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
+  border: 0;
+}
+
+.hidden {
+  display: none;
 }
