@@ -1,12 +1,12 @@
 /* typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
-  font-family: $primary-font, Arial, Helvetica, sans-serif;
+  font-family: $primary-font;
 }
 
 p, li, label, blockquote, button {
   font-weight: 400;
-  font-family: $secondary-font, Arial, Helvetica, sans-serif;
+  font-family: $secondary-font;
   font-size: $font-size;
   text-decoration: none;
 }

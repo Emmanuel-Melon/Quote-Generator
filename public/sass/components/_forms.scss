@@ -4,7 +4,7 @@ input[type=radio] {
 }
 
 .radio-button {
-  background: #f0f1dc;
+  background: $space-white;
   padding: 1em;
   border-radius: 1.5em;
   width: 120px;
@@ -101,8 +101,8 @@ input[type=range]::-ms-thumb {
   height: 36px;
   width: 16px;
   border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
+  background: $white;
+  cursor: $secondary-cursor;
 }
 input[type=range]:focus::-ms-fill-lower {
   background: #f69454;
@@ -116,8 +116,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .form-control {
-
-  background: red;
+  //
 }
 
 .form-group {
