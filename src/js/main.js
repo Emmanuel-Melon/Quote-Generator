@@ -3,9 +3,9 @@
  * main js file
  */
 const generateButton = document.querySelector("#generate");
-const customizeButton = document.querySelector("#customize");
+// const customizeButton = document.querySelector("#customize");
 const quotes = document.querySelector("#quotes");
-const info = document.querySelector(".info");
+// const info = document.querySelector(".info");
 const quoteType = document.querySelector("#quoteType");
 
 /**
@@ -23,24 +23,10 @@ const defaultConfig = {
   isLoading: true
 };
 
-/**
- * element creators
- * Should return an array
- */
-const createQuotes = () => {
-  let newQuote = new Quote();
-  let generatedQuote = newQuote.generate();
-  /**
-  * hide info
-  */
-  // hide(info);
-  return quote;
-};
 
 /**
  *
  * @param quotesArray
- * @param number
  * @returns {*}
  */
 const displayQuotes = (quotesArray) => {
@@ -53,12 +39,9 @@ const displayQuotes = (quotesArray) => {
   });
 };
 
-// can event listeners take inputs?
 generateButton.addEventListener("click", () => {
   let newQuote = new Quote(defaultConfig);
   let generatedQuotes = newQuote.generate();
-  let data = displayQuotes(generatedQuotes);
-  // console.log(data);
   // you might wanna do something about this!
-  quotes.innerHTML = data.join();
+  quotes.innerHTML = displayQuotes(generatedQuotes);
 });

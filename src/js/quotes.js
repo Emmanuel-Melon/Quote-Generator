@@ -7,7 +7,7 @@
 // import extractFragments from "./fragments";
 
 /**
- * @decscription creates new quote objects with specified config
+ * @description creates new quote objects with specified config
  * @param config
  * @constructor
  */
