@@ -3,9 +3,9 @@ Random quote generator which constructs quotes by assembling different pieces of
 View demo [Quotation Generator](https://emmanuel-melon.github.io/Quote-Generator/) 
 ## Objectives: This app will be built in two steps  
 ### Step 1:  
-- [ ] The quotes are generated randomly one by one with each JavaScript call  
-- [ ] Each quote is a combination of at least 3 sentence fragments (it's up to you to create these sentence fragments: beginning, middle, and end)  
-- [ ] The quotes should be relatively coherent (no exclamation points in the middle of a sentence, for example)  
+- [x] The quotes are generated randomly one by one with each JavaScript call  
+- [x] Each quote is a combination of at least 3 sentence fragments (it's up to you to create these sentence fragments: beginning, middle, and end)  
+- [x] The quotes should be relatively coherent (no exclamation points in the middle of a sentence, for example)  
 
 ### Step 2:
 - [ ] Select the number of quotes generated (between 1 and 5)  
