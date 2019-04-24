@@ -1,13 +1,35 @@
-// import extractFragments from "./fragments";
-/**
- * generates new quotes
+/***********************************************************
+ * Author: Emmanuel Gatwech
+ * Description: An application that generates random quotes
+ * *********************************************************
  */
-function Quote (iter) {
-  this.quotes = iter;
+
+// import extractFragments from "./fragments";
+
+/**
+ * @decscription creates new quote objects with specified config
+ * @param config
+ * @constructor
+ */
+function Quote (config = defaultConfig) {
+  this.config = config;
 };
 
+/**
+ * @returns {array}
+ */
 Quote.prototype.generate = function () {
-  return extractFragments(fragments);
+  // destructuring values from config
+  let { type, num } = this.config;
+
+  // new fragment
+  let fragment = new Fragment();
+  fragment.selectFragmentType(type);
+
+  /**
+   * TODO: generate n number of quotes
+   */
+  return fragment.generateFragments(num);
 };
 
 // export default Quote;

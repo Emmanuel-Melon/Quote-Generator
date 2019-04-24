@@ -13,32 +13,52 @@ const quoteType = document.querySelector("#quoteType");
  */
 quoteType.innerText = "Motivational Quotes";
 
+/**
+ *
+ * @type {{isLoading: boolean, num: number, type: string}}
+ */
+const defaultConfig = {
+  num: 5,
+  type: "motivational",
+  isLoading: true
+};
 
 /**
  * element creators
+ * Should return an array
  */
 const createQuotes = () => {
   let newQuote = new Quote();
   let generatedQuote = newQuote.generate();
-  const quote = document.createElement("li");
-  const quoteText = document.createElement("blockquote");
-  quoteText.innerText = generatedQuote;
-  quote.className = "quote";
-  append(quote, quoteText);
-
   /**
   * hide info
   */
-  hide(info);
+  // hide(info);
   return quote;
 };
 
-
-const generateQuote = () => {
-  let quote = createQuotes();
-  append(quotes, quote);
-};
 /**
- * event listenrs
+ *
+ * @param quotesArray
+ * @param number
+ * @returns {*}
  */
-generateButton.addEventListener("click", generateQuote);
+const displayQuotes = (quotesArray) => {
+  return quotesArray.map(quote => {
+    return (
+        `<li class='quote'>
+            <p>${quote}</p>
+        </li>`
+    );
+  });
+};
+
+// can event listeners take inputs?
+generateButton.addEventListener("click", () => {
+  let newQuote = new Quote(defaultConfig);
+  let generatedQuotes = newQuote.generate();
+  let data = displayQuotes(generatedQuotes);
+  // console.log(data);
+  // you might wanna do something about this!
+  quotes.innerHTML = data.join();
+});
