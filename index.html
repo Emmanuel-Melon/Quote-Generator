@@ -22,7 +22,9 @@
         <div id="info">
           <div class="centered info-image">
             <div class="img-container">
-              <img src="./public/img/16469.jpg" alt="buddha" id="buddha">
+              <img src="./public/img/minimum.jpg" data-src="./public/img/normal.jpg" alt="a cartooned image of buddha" id="buddha" class="lazy"
+                   data-srcset="./public/img/minimum.jpg 2x ./public/img/low.jpg 1x"
+              >
             </div>
           </div>
           <div class="centered">
@@ -38,20 +40,56 @@
               <button class="button ghost" id="customize">Customize</button>
             </div>
           </div>
-          <form action="" class="form">
-            <div class="form-group">
-              <button class="radio-button">Happy Quotes</button>
-              <button class="radio-button active">Evil Quotes</button>
-            </div>
-            <div class="form-group">
-              <label for="range">Number of quotes</label>
-              <input type="range" id="range" name="drone" value="huey" class="range">
-            </div>
-          </form>
         </div>
       </div>
     </aside>
     <section id="content">
+      <div id="modal" class="centered">
+        <div id="modal-content">
+          <div id="modal-head">
+            <h3>Customize Quotes</h3>
+          </div>
+          <div id="modal-body">
+            <!-- form -->
+            <form action="" onsubmit="handleSubmit(event)">
+              <fieldset>
+                <legend>Customize your quotes:</legend>
+                <div class="form-group">
+                  <h4>Quote types</h4>
+                  <button class="button active" name="type" value="motivational">Motivational</button>
+                  <button class="button" value="wisdom" name="type">Wisdom</button>
+                </div>
+                <h4>Number of quotes</h4>
+                <div class="form-group">
+                  <div class="form-control">
+                    <input type="radio" id="quoteChoice1" name="choice" value="1" checked>
+                    <label for="quoteChoice1">One</label>
+                  </div>
+                  <div class="form-control">
+                    <input type="radio" id="quoteChoice2" name="choice" value="2">
+                    <label for="quoteChoice2">Two</label>
+                  </div>
+                  <div class="form-control">
+                    <input type="radio" id="quoteChoice3" name="choice" value="3">
+                    <label for="quoteChoice3">Three</label>
+                  </div>
+                  <div class="form-control">
+                    <input type="radio" id="quoteChoice4" name="choice" value="4">
+                    <label for="quoteChoice4">Four</label>
+                  </div>
+                  <div class="form-control">
+                    <input type="radio" id="quoteChoice5" name="choice" value="5">
+                    <label for="quoteChoice5">Five</label>
+                  </div>
+                </div>
+                <div>
+                  <input type="submit" value="Done" class="button">
+                </div>
+              </fieldset>
+            </form> <!-- form -->
+          </div>
+        </div>
+      </div>
       <div class="centered">
         <div>
           <h1 class="main-heading" id="main-heading">Random Quote Generator</h1>
