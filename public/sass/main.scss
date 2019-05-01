@@ -1,6 +1,7 @@
 /**
 imports
  */
+@import 'abstracts/animations';
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
@@ -18,4 +19,5 @@ imports
 @import 'layout/sidebar';
 @import 'layout/wrapper';
 
+// google maps!
 @import 'pages/home';
