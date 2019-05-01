@@ -3,10 +3,11 @@
  * main js file
  */
 const generateButton = document.querySelector("#generate");
-// const customizeButton = document.querySelector("#customize");
 const quotes = document.querySelector("#quotes");
-// const info = document.querySelector(".info");
+const info = document.querySelector(".info");
 const quoteType = document.querySelector("#quoteType");
+const modal = document.querySelector("#modal");
+const customizeButton = document.querySelector("#customize");
 
 /**
  * Main heading
@@ -19,7 +20,8 @@ quoteType.innerText = "Motivational Quotes";
  */
 const defaultConfig = {
   num: 5,
-  type: "motivational",
+  defaultType: "motivational",
+  currentType: "wisdom",
   isLoading: true
 };
 
@@ -39,9 +41,16 @@ const displayQuotes = (quotesArray) => {
   });
 };
 
+/*
+this is could be handled in a better way
+ */
 generateButton.addEventListener("click", () => {
-  let newQuote = new Quote(defaultConfig);
+  let newQuote = new Quote();
   let generatedQuotes = newQuote.generate();
   // you might wanna do something about this!
   quotes.innerHTML = displayQuotes(generatedQuotes);
 });
+
+// modal.classList.remove("modalHidden");
+// modal.classList.add("modalVisible");
+// console.log(modal);

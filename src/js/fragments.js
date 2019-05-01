@@ -30,13 +30,25 @@ const fragments = {
   },
   wisdom: {
     begin: [
-        "you are"
+        "you are",
+        "life is",
+        "vision",
+        "success is",
+        "today is"
     ],
     mid: [
-      "what"
+      "what",
+      "nothing but",
+      "hard but",
+      "a present",
+      "a real goal"
     ],
     end: [
-      "you eat"
+      "you eat",
+      "you make it",
+      "powers nation",
+      "hard work and dedication",
+      "giving up is harder"
     ]
   }
 };
@@ -48,7 +60,7 @@ const fragments = {
  */
 const Fragment = function () {
   this.fragments = fragments || {};
-  this.currentType = this.fragments.motivational || {};
+  this.currentType = null;
 };
 
 /**
@@ -56,11 +68,11 @@ const Fragment = function () {
  * @param type - a string indicating the type of quotes
  * @returns {*}
  */
-Fragment.prototype.selectFragmentType = function (type) {
-  if(isEmpty(type)) {
-    throw new Error("quotes type must be a valid string");
-  } else if (type === "motivational" || type === "wisdom") {
-    return this.currentType = type;
+Fragment.prototype.selectFragmentType = function (quoteType) {
+  console.log(quoteType);
+  if (quoteType === "motivational" || quoteType === "wisdom") {
+    this.currentType = quoteType;
+    console.log("ayo!");
   } else {
     throw new Error("quotes could only be motivational or wisdom only");
   }
@@ -77,13 +89,9 @@ Fragment.prototype.generateFragments = function (num) {
   } else if (num < 1 || num > 5) {
     throw new Error("invalid range for num. Must be between 1 and 5");
   } else {
-    // ! same quote is repeated
-    let begin = getRandom(fragments[this.currentType].begin);
-    let mid = getRandom(fragments[this.currentType].mid);
-    let end = getRandom(fragments[this.currentType].end);
     let quotes = [];
-    for(let i = 0; i <= num; i++) {
-      quotes[i] = `${begin} ${mid} ${end}`;
+    for(let i = 0; i < num; i++) {
+      quotes[i] = `${getRandom(this.fragments[this.currentType].begin)} ${getRandom(this.fragments[this.currentType].mid)} ${getRandom(this.fragments[this.currentType].end)}`;
     }
     return quotes;
   }

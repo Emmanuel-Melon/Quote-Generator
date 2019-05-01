@@ -35,13 +35,21 @@ const append = (htmlString) => {
  * 2 - class changes
  */
 const showModal = () => {
-  const modal = document.createElement("div");
+  var span = document.getElementsByClassName("close")[0];
+
+  const customizeButton = document.querySelector("#customize");
+  modal.style.display = "block";
+
+// When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  };
   modal.className = "modal";
-  const modalContent = document.createElement("div");
-  const modalHead = document.createElement("div");
-  const modalBody = document.createElement("div");
-  const modalFooter = document.createElement("div");
-  document.appendChild(modal);
+  window.onclick = function(event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
 };
 
 /**
@@ -88,11 +96,20 @@ const customizeQuotes = config => {
 /**
  * @description Sets up a new global config object
  * @param event
+ * ? should event handlers return anything?
  */
 const handleSubmit = event => {
   event.preventDefault();
   let value = event.target.choice.value;
   let type = event.target.type.value;
 
-  // TODO: call customizeQuotes
+  if(isEmpty(value) && isEmpty(type)) {
+    throw new Error("Empty form values");
+  }
+  return {
+    value,
+    type
+  }
 };
+
+modal.addEventListener("click", showModal());
