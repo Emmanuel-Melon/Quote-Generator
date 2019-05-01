@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $primary-font;
 }
 
-p, li, label, blockquote, button {
+p, li, label, blockquote, button, legend {
   font-weight: 400;
   font-family: $secondary-font;
   font-size: $font-size;
@@ -17,6 +17,11 @@ blockquote {
 
 ul {
   list-style-type: none;
+}
+
+h4 {
+  color: #515353;
+  font-size: 24px;
 }
 
 #main-heading {
@@ -58,4 +63,8 @@ ul {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   text-align: center;
   border-top: solid 0.3em #739f3d;
+}
+
+legend {
+  color: #ee693f;
 }
