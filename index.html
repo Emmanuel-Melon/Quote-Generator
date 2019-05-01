@@ -44,8 +44,9 @@
       </div>
     </aside>
     <section id="content">
-      <div id="modal" class="centered">
+      <div id="modal" class="centered modalHidden">
         <div id="modal-content">
+          <span class="close">&times;</span>
           <div id="modal-head">
             <h3>Customize Quotes</h3>
           </div>
@@ -54,10 +55,12 @@
             <form action="" onsubmit="handleSubmit(event)">
               <fieldset>
                 <legend>Customize your quotes:</legend>
+                <h4>Quote types</h4>
                 <div class="form-group">
-                  <h4>Quote types</h4>
-                  <button class="button active" name="type" value="motivational">Motivational</button>
-                  <button class="button" value="wisdom" name="type">Wisdom</button>
+                  <label for="motivational">Motivational</label>
+                  <input name="type" value="Motivational" type="radio" id="motivational">
+                  <label for="wisdom">Wisdom</label>
+                  <input name="type" value="Wisdom" type="radio" id="wisdom">
                 </div>
                 <h4>Number of quotes</h4>
                 <div class="form-group">
