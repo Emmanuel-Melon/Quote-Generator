@@ -365,7 +365,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Adamina", Arial, Helvetica, sans-serif;
 }
 
-p, li, label, blockquote, button {
+p, li, label, blockquote, button, legend {
   font-weight: 400;
   font-family: "Dosis", Arial, Helvetica, sans-serif;
   font-size: 18px;
@@ -378,6 +378,11 @@ blockquote {
 
 ul {
   list-style-type: none;
+}
+
+h4 {
+  color: #515353;
+  font-size: 24px;
 }
 
 #main-heading {
@@ -421,12 +426,15 @@ ul {
   border-top: solid 0.3em #739f3d;
 }
 
+legend {
+  color: #ee693f;
+}
+
 /* button */
 .button {
   width: 150px;
   padding: 0.5em;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  border-radius: 1.5em;
   margin: 0.2em;
   transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -461,138 +469,6 @@ ul {
 }
 
 /* radio input */
-input[type=radio] {
-  display: none;
-}
-
-.radio-button {
-  background: #f0f1dc;
-  padding: 1em;
-  border-radius: 1.5em;
-  width: 120px;
-}
-
-/* range input */
-input[type=range] {
-  background: transparent;
-  margin-top: 1.5em;
-  width: 100%;
-}
-
-input[type=range]:focus {
-  outline: none;
-}
-
-/* range thumb */
-input[type=range] {
-  -webkit-appearance: none;
-  margin: 18px 0;
-  width: 100%;
-}
-
-input[type=range]:focus {
-  outline: none;
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 8.4px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 1px 1px 1px #f69454, 0px 0px 1px #0d0d0d;
-  background: #f69454;
-  border-radius: 1.3px;
-  border: 0.2px solid #fcfdfe;
-}
-
-input[type=range]::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px #f69454, 0px 0px 1px #0d0d0d;
-  border: 1px solid #f69454;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -14px;
-}
-
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #f69454;
-}
-
-input[type=range]::-moz-range-track {
-  width: 100%;
-  height: 8.4px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 1px 1px 1px #f69454, 0px 0px 1px #0d0d0d;
-  background: #f69454;
-  border-radius: 1.3px;
-  border: 0.2px solid #fcfdfe;
-}
-
-input[type=range]::-moz-range-thumb {
-  box-shadow: 1px 1px 1px #f69454, 0px 0px 1px #0d0d0d;
-  border: 1px solid #f69454;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
-  background: #ffffff;
-  cursor: pointer;
-}
-
-input[type=range]::-ms-track {
-  width: 100%;
-  height: 8.4px;
-  cursor: pointer;
-  animate: 0.2s;
-  background: transparent;
-  border-color: transparent;
-  border-width: 16px 0;
-  color: transparent;
-}
-
-input[type=range]::-ms-fill-lower {
-  background: #f69454;
-  border: 0.2px solid #fcfdfe;
-  border-radius: 2.6px;
-  box-shadow: 1px 1px 1px #f69454, 0px 0px 1px #0d0d0d;
-}
-
-input[type=range]::-ms-fill-upper {
-  background: #f69454;
-  border: 0.2px solid #fcfdfe;
-  border-radius: 2.6px;
-  box-shadow: 1px 1px 1px #f69454, 0px 0px 1px #0d0d0d;
-}
-
-input[type=range]::-ms-thumb {
-  box-shadow: 1px 1px 1px #f69454, 0px 0px 1px #0d0d0d;
-  border: 1px solid #f69454;
-  height: 36px;
-  width: 16px;
-  border-radius: 3px;
-  background: #fff;
-  cursor: pointer;
-}
-
-input[type=range]:focus::-ms-fill-lower {
-  background: #f69454;
-}
-
-input[type=range]:focus::-ms-fill-upper {
-  background: #f69454;
-}
-
-.form {
-  display: none;
-}
-
-.form-group {
-  margin: 1.5em;
-}
-
 #buddha {
   height: auto;
   width: 100%;
@@ -602,6 +478,39 @@ input[type=range]:focus::-ms-fill-upper {
 
 .img-container {
   max-width: 450px;
+}
+
+#modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding: 1.5em;
+  display: none;
+  background: #0d0d0d;
+  background: rgba(13, 13, 13, 0.07);
+}
+
+#modal-content {
+  border-radius: 0.3em;
+  width: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#modal-body, #modal-head {
+  padding: 1em;
+}
+
+#modal-head {
+  background: #e78e52;
+  text-align: center;
+}
+
+#modal-body {
+  background: #fcfdfe;
 }
 
 #content {
@@ -626,19 +535,17 @@ input[type=range]:focus::-ms-fill-upper {
   padding: 0;
 }
 
+/**
+ * animate this shit
+ */
 .quote {
   padding: 0.5em;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   border-left: solid 0.3em #739f3d;
   border-radius: 0.2em;
   background: #fcfdfe;
   margin: 0.5em;
-}
-
-#quotes {
-  height: 600px;
-  overflow-y: scroll;
+  transition: visibility 1000s ease-in 0.5s;
 }
 
 /*# sourceMappingURL=styles.css.map */
