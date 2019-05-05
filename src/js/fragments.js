@@ -1,4 +1,4 @@
-// import { getRandom } from "./helpers";
+import { getRandom } from "./helpers";
 
 const fragments = {
   motivational: {
@@ -96,3 +96,5 @@ Fragment.prototype.generateFragments = function (num) {
     return quotes;
   }
 };
+
+export default Fragment;

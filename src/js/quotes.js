@@ -4,7 +4,14 @@
  * *********************************************************
  */
 
-// import extractFragments from "./fragments";
+import Fragment from "./fragments";
+
+const defaultConfig = {
+  num: 3,
+  defaultType: "motivational",
+  currentType: "motivational",
+  isLoading: true
+};
 
 /**
  * @description creates new quote objects with specified config
@@ -35,10 +42,9 @@ Quote.prototype.generate = function () {
   return fragment.generateFragments(num);
 };
 
-// keepoing it SOLID
 Quote.prototype.configureQuote = () => {
   // should be responsible for handling the form
 };
 
 
-// export default Quote;
+export default Quote;

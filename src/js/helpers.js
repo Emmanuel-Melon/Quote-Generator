@@ -8,7 +8,7 @@
  * @description does X
  * @param element
  */
-const hide = element => {
+exports.hide = element => {
   element.classList.add("hidden");
 };
 
@@ -17,7 +17,7 @@ const hide = element => {
  * @param htmlString
  * TODO: concatenate, don't append!
  */
-const append = (htmlString) => {
+exports.append = (htmlString) => {
   let fragment = document.createDocumentFragment();
   let temp = document.createElement("div");
   // temp.className = "quote";
@@ -29,35 +29,11 @@ const append = (htmlString) => {
 };
 
 /**
- * animate position from top to center
- * triggering animations
- * 1 - pseudo classes
- * 2 - class changes
- */
-const showModal = () => {
-  var span = document.getElementsByClassName("close")[0];
-
-  const customizeButton = document.querySelector("#customize");
-  modal.style.display = "block";
-
-// When the user clicks on <span> (x), close the modal
-  span.onclick = function() {
-    modal.style.display = "none";
-  };
-  modal.className = "modal";
-  window.onclick = function(event) {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  };
-};
-
-/**
  * @description does X
  * @param data
  * @returns {boolean}
  */
-const isEmpty = data => {
+exports.isEmpty = data => {
   return data.length === 0 || typeof data === undefined;
 };
 
@@ -78,7 +54,7 @@ const getLength = iter => {
  * @param iter
  * @returns {*}
  */
-const getRandom = (iter) => {
+exports.getRandom = (iter) => {
   if(isEmpty(iter)) {
     throw new Error("Iterable is empty");
   }
@@ -89,7 +65,7 @@ const getRandom = (iter) => {
  * @description does X
  * @param event
  */
-const customizeQuotes = config => {
+exports.customizeQuotes = config => {
   // TODO: return a new config object or modify existing config object?
 };
 
@@ -111,5 +87,3 @@ const handleSubmit = event => {
     type
   }
 };
-
-modal.addEventListener("click", showModal());

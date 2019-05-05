@@ -1,4 +1,6 @@
 const path = require("path");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     mode: "development",
@@ -6,30 +8,48 @@ module.exports = {
         main: "./src/js/main.js"
     },
     output: {
-        path: path.resolve(__dirname, "build"),
+        path: path.resolve(__dirname, "dist"),
         filename: "bundle.js"
     },
     module: {
-        rules: [{
-            test: /\.js?$/,
-            exclude: /node_modules/,
-            use: [
-                { loader: "babel-loader" }
-            ]
-        }]
-    }
+        rules: [
+            {
+                test: /\.js?$/,
+                exclude: /node_modules/,
+                use: [
+                    // babel loader
+                    "babel-loader"
+                    ]
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    "style-loader",
+                    "css-loader"
+                ]
+            },
+            {
+                test: /\.scss$/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "sass-loader"
+                ]
+            },
+            {
+                test: /\.(png|jpg)$/,
+                use: [
+                    "file-loader"
+                ]
+            }
+        ]
+    },
+    plugins: [
+        new CleanWebpackPlugin(),
+        new HtmlWebPackPlugin({
+            title: "Quote Generator",
+            template: "index.html"
+            // config
+        })
+    ]
 };
-
-
-/**
- *
- *         loader: "babel-loader",
- query: {
-            presets: ["env"]
-        }
- */
-// cannot find module `webpack`
-// possible reason: mismatch between webpack versions
-// global version is 4.25.1
-// local version is 4.30.0
-// explicit specification of path
