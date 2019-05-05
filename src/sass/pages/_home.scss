@@ -1,0 +1,19 @@
+/**
+ * animate this shit
+ */
+.quote {
+  padding: 0.5em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border-left: solid 0.3em #739f3d;
+  border-radius: 0.2em;
+  background: #fcfdfe;
+  margin: 0.5em;
+  transition: visibility 1000s ease-in 0.5s;
+}
+
+// two ways to do it
+// transition  property
+//  (animation + keyframe properties)
+
+
+

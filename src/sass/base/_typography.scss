@@ -1,0 +1,70 @@
+/* typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  font-family: $primary-font;
+}
+
+p, li, label, blockquote, button, legend {
+  font-weight: 400;
+  font-family: $secondary-font;
+  font-size: $font-size;
+  text-decoration: none;
+}
+
+blockquote {
+  color: $font-color;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h4 {
+  color: #515353;
+  font-size: 24px;
+}
+
+#main-heading {
+  font-size: 46px;
+}
+
+.main-heading {
+  font-size: 36px;
+  color: $secondary-color;
+}
+
+.main-heading:after {
+  display: block;
+  content: "";
+  width: 35px;
+  border-bottom: solid 0.2em #739f3d;
+  border-radius: 0.2em;
+}
+
+.text-center {
+  text-align: $text-center;
+}
+
+.sub-heading {
+  color: $headings-color;
+}
+
+.styled {
+  height: 6px;
+  background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
+  border: 0;
+}
+
+.info {
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  background: #fcfdfe;
+  padding: 1.5em;
+  border-radius: 0.2em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  text-align: center;
+  border-top: solid 0.3em #739f3d;
+}
+
+legend {
+  color: #ee693f;
+}

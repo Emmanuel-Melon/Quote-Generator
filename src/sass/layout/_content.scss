@@ -1,0 +1,9 @@
+#content {
+  // background-image: url("https://previews.123rf.com/images/lovender/lovender1803/lovender180300049/103605791-shamrock-pattern-seamless-vector-background-green-leaves-on-light-green-backdrop.jpg");
+  background-image: url(../../public/img/leaves.png);
+  flex: 2;
+}
+
+// path is correct but sass won't load image.
+// background-image: url(../../img/leaves.png);
+// ../public/img/leaves.png
