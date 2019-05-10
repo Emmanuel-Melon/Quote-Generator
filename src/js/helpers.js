@@ -76,7 +76,7 @@ exports.customizeQuotes = config => {
  */
 const handleSubmit = event => {
   event.preventDefault();
-  let value = event.target.choice.value;
+  let value = event.target.value.value;
   let type = event.target.type.value;
 
   if(isEmpty(value) && isEmpty(type)) {
