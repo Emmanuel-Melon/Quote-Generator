@@ -1,5 +1,50 @@
 /* radio input */
-input[type=radio] {
+$transition-duration: 450ms;
+$transition-delay: ease-in ease-out;
+$timing-function: ease-in-out;
 
+// form
+.animated-form {
+  background-color: darkslategrey;
+  border-radius: 0.2em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  width: 600px;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  // form groups
+  .form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em;
+
+    &__input {
+      visibility: hidden;
+      transition: border $transition-duration;
+      transition-timing-function: $timing-function;
+    }
+    // leaves
+    &__leaf {
+      width: 60px;
+      height: 80px;
+      transition: transform $transition-duration, opacity $transition-duration;
+      transition-timing-function: $timing-function;
+      &:hover {
+        transform: scale(1.4);
+        cursor: pointer;
+      }
+      // how about keeping the checked one colored and the others dimmed? // that is called proper UX
+      &:checked {
+        opacity: 0.4;
+        border: solid 0.5em red;
+      }
+    }
+  }
+  .animated-form--light {
+    // background: red;
+  }
 }
-

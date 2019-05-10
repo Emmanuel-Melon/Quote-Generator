@@ -6,11 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Emmanuel-Melon">
   <!-- custom styles -->
+  <link rel="stylesheet" href="./src/css/styles.css">
   <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css?family=Adamina|Dosis" rel="stylesheet">
-  <!-- font awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -33,68 +31,83 @@
           <div class="centered">
             <div>
               <h2 class="sub-heading text-center" id="quoteType"></h2> <hr class="styled">
-              <p class="text-center">Generate or customize quotes</p>
+              <p class="text-center">Generate a random quote</p>
               <button class="button active" id="generate">Generate</button>
-              <button class="button ghost" id="customize">Customize</button>
             </div>
           </div>
         </div>
       </div>
     </aside>
     <section id="content">
-      <div id="modal" class="centered modalHidden">
-        <div id="modal-content">
-          <span class="close">&times;</span>
-          <div id="modal-head">
-            <h3>Customize Quotes</h3>
-          </div>
-          <div id="modal-body">
-            <!-- form -->
-            <form action="" onsubmit="handleSubmit(event)">
-              <fieldset>
-                <legend>Customize your quotes:</legend>
-                <h4>Quote types</h4>
-                <div class="form-group">
-                  <label for="motivational">Motivational</label>
-                  <input name="type" value="Motivational" type="radio" id="motivational">
-                  <label for="wisdom">Wisdom</label>
-                  <input name="type" value="Wisdom" type="radio" id="wisdom">
-                </div>
-                <h4>Number of quotes</h4>
-                <div class="form-group">
-                  <div class="form-control">
-                    <input type="radio" id="quoteChoice1" name="choice" value="1" checked>
-                    <label for="quoteChoice1">One</label>
-                  </div>
-                  <div class="form-control">
-                    <input type="radio" id="quoteChoice2" name="choice" value="2">
-                    <label for="quoteChoice2">Two</label>
-                  </div>
-                  <div class="form-control">
-                    <input type="radio" id="quoteChoice3" name="choice" value="3">
-                    <label for="quoteChoice3">Three</label>
-                  </div>
-                  <div class="form-control">
-                    <input type="radio" id="quoteChoice4" name="choice" value="4">
-                    <label for="quoteChoice4">Four</label>
-                  </div>
-                  <div class="form-control">
-                    <input type="radio" id="quoteChoice5" name="choice" value="5">
-                    <label for="quoteChoice5">Five</label>
-                  </div>
-                </div>
-                <div>
-                  <input type="submit" value="Done" class="button">
-                </div>
-              </fieldset>
-            </form> <!-- form -->
-          </div>
-        </div>
-      </div>
       <div class="centered">
         <div>
           <h1 class="main-heading" id="main-heading">Random Quote Generator</h1>
-          <p class="info">These quotes are totally random but may motivate you.</p>
+          <form id="form" class="animated-form animated-form--light">
+            <p class="info">Customize your quotes</p>
+            <div class="form-group">
+              <label for="wisdom" class="form-group__type-label">Wisdom</label>
+              <input
+                      class="form-group__input-type"
+                      id="wisdom"
+                      name="type"
+                      placeholder="e.g John Doe"
+                      type="radio"
+                      value="motivational"
+                      checked
+              >
+              <label for="motivational" class="form-group__type-label">Motivational</label>
+              <input
+                      class="form-group__input-type"
+                      id="motivational"
+                      name="type"
+                      type="radio"
+                      value="motivational"
+              >
+            </div> <!-- form-group -->
+            <div class="form-group">
+              <label for="one"><img src="./public/img/leaf.svg" alt="leaf" class="form-group__leaf"></label>
+              <input
+                      class="form-group__input"
+                      type="radio"
+                      id="one"
+                      name="num"
+                      value=1
+                      checked
+              >
+              <label for="two"><img src="./public/img/leaf.svg" alt="leaf" class="form-group__leaf"></label>
+              <input
+                      class="form-group__input"
+                      type="radio"
+                      id="two"
+                      name="num"
+                      value=2
+              >
+              <label for="three"><img src="./public/img/leaf.svg" alt="leaf" class="form-group__leaf"></label>
+              <input
+                      class="form-group__input"
+                      type="radio"
+                      id="three"
+                      name="num"
+                      value=3
+              >
+              <label for="four"><img src="./public/img/leaf.svg" alt="leaf" class="form-group__leaf"></label>
+              <input
+                      class="form-group__input"
+                      type="radio"
+                      id="four"
+                      name="num"
+                      value=4
+              >
+              <label for="five"><img src="./public/img/leaf.svg" alt="leaf" class="form-group__leaf"></label>
+              <input
+                      class="form-group__input"
+                      type="radio"
+                      id="five"
+                      name="num"
+                      value=5
+              >
+            </div>
+          </form> <!-- form -->
         </div>
       </div>
       <ul id="quotes">
@@ -103,6 +116,5 @@
     </section>
   </section>
   <!-- scripts -->
-  <script src="bundle.js"></script>
 </body>
 </html>
