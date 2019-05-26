@@ -63,3 +63,37 @@ h4 {
 legend {
   color: #ee693f;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  //CSS
+  #main-heading {
+    font-size: 16px;
+  }
+
+  .main-heading {
+    font-size: 16px;
+    color: $secondary-color;
+  }
+
+  .version {
+    display: none;
+  }
+
+}
+
+// tablet
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  //CSS
+  // more padding and center content
+  // reduce font size
+  #main-heading {
+    font-size: 1.5rem;
+  }
+
+  .main-heading {
+    font-size: 1rem;
+    color: $secondary-color;
+  }
+}

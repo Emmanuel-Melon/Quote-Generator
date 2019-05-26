@@ -1,8 +1,8 @@
 /**
 imports
  */
-@import 'abstracts/mixins';
-@import 'abstracts/variables';
+@import 'utils/mixins';
+@import 'utils/variables';
 
 @import 'base/base';
 @import 'base/reset';
@@ -15,7 +15,10 @@ imports
 @import 'components/modals';
 
 @import 'layout/content';
+@import 'layout/large';
+@import 'layout/medium';
 @import 'layout/sidebar';
+@import 'layout/small';
 @import 'layout/wrapper';
 
 // google maps!
