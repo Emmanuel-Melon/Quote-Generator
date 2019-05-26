@@ -7,7 +7,7 @@
 import Fragment from "./fragments";
 
 const defaultConfig = {
-  num: 3,
+  num: 5,
   defaultType: "motivational",
   currentType: "motivational",
   isLoading: true

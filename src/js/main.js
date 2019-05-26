@@ -56,3 +56,5 @@ generateButton.addEventListener("click", () => {
       type = event.target.valueOf;
     })
   });
+
+  // consider running predeploy scripts

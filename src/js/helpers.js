@@ -33,7 +33,7 @@ exports.append = (htmlString) => {
  * @param data
  * @returns {boolean}
  */
-exports.isEmpty = data => {
+const isEmpty = data => {
   return data.length === 0 || typeof data === undefined;
 };
 
@@ -67,23 +67,4 @@ exports.getRandom = (iter) => {
  */
 exports.customizeQuotes = config => {
   // TODO: return a new config object or modify existing config object?
-};
-
-/**
- * @description Sets up a new global config object
- * @param event
- * ? should event handlers return anything?
- */
-const handleSubmit = event => {
-  event.preventDefault();
-  let value = event.target.value.value;
-  let type = event.target.type.value;
-
-  if(isEmpty(value) && isEmpty(type)) {
-    throw new Error("Empty form values");
-  }
-  return {
-    value,
-    type
-  }
 };

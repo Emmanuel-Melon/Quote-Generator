@@ -69,10 +69,8 @@ const Fragment = function () {
  * @returns {*}
  */
 Fragment.prototype.selectFragmentType = function (quoteType) {
-  console.log(quoteType);
   if (quoteType === "motivational" || quoteType === "wisdom") {
     this.currentType = quoteType;
-    console.log("ayo!");
   } else {
     throw new Error("quotes could only be motivational or wisdom only");
   }
@@ -84,9 +82,7 @@ Fragment.prototype.selectFragmentType = function (quoteType) {
  * @return {array} fragments - an array representing fragments
  */
 Fragment.prototype.generateFragments = function (num) {
-  if(isEmpty(num)) {
-    throw new Error("num type must be a valid number");
-  } else if (num < 1 || num > 5) {
+  if (num < 1 || num > 5) {
     throw new Error("invalid range for num. Must be between 1 and 5");
   } else {
     let quotes = [];
