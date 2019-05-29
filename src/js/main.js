@@ -21,7 +21,9 @@ quoteType.innerText = "Motivational Quotes";
  * @returns {*}
  */
 const displayQuotes = (quotesArray) => {
+  console.log(quotesArray);
   return quotesArray.map(quote => {
+    console.log(quote);
     return (
         `<li class='quote'>
             <p>${quote}</p>
@@ -36,12 +38,10 @@ const displayQuotes = (quotesArray) => {
 generateButton.addEventListener("click", () => {
   let newQuote = new Quote();
   let generatedQuotes = newQuote.generate();
+  console.log(generatedQuotes);
   quotes.innerHTML = displayQuotes(generatedQuotes);
 });
 
-// this is only specific to the radio buttons
-// you need to combine this to
-// how you gon' trigger this function?
   let number, type;
   quoteNumberButtons.forEach(button => {
     button.addEventListener("click", (event) => {
@@ -56,5 +56,3 @@ generateButton.addEventListener("click", () => {
       type = event.target.valueOf;
     })
   });
-
-  // consider running predeploy scripts

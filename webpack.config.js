@@ -31,7 +31,6 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    "style-loader",
                     "css-loader",
                     "sass-loader"
                 ]
@@ -50,5 +49,8 @@ module.exports = {
             title: "Quote Generator",
             template: "index.html"
         })
-    ]
+    ],
+    devServer: {
+        hot: true
+    }
 };
