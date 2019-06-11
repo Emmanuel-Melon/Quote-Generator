@@ -1,0 +1,28 @@
+.customization {
+  background: white;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  padding: $padding-large;
+  background-color: $primary-color;
+  color: white;
+  visibility: hidden;
+}
+
+// mobile devices
+@media (min-width: 320px) and (max-width: 480px) {
+
+  //CSS
+  .customization {
+    padding: $padding-small;
+  }
+
+}
+
+// tablets
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  //CSS
+  .customization {
+    padding: $padding-medium;
+  }
+
+}
