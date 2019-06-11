@@ -13,7 +13,7 @@ View demo [Quotation Generator](https://emmanuel-melon.github.io/Quote-Generator
 - [x] The quotes should be relatively coherent (no exclamation points in the middle of a sentence, for example)  
 
 ### Step 2:
-- [ ] Select the number of quotes generated (between 1 and 5)  
-- [ ] Choose between 2 types of quote generators (accordingly, you'll need two different sets of sentences)  
-- [ ] Once the quotes are generated, have the program generate new quotes or quit the program  
+- [x] Select the number of quotes generated (between 1 and 5)  
+- [x] Choose between 2 types of quote generators (accordingly, you'll need two different sets of sentences)  
+- [x] Once the quotes are generated, have the program generate new quotes or quit the program  
 
