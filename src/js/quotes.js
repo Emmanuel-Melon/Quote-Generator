@@ -6,44 +6,31 @@
 
 import Fragment from "./fragments";
 
-const defaultConfig = {
-  num: 5,
-  defaultType: "motivational",
-  currentType: "motivational",
-  isLoading: true
-};
-
 /**
  * @description creates new quote objects with specified config
- * @param config
  * @constructor
- * * Turn this into a factory, but why?
  */
-function Quote (config = defaultConfig) {
-  this.config = config;
+function Quote () {
+
 };
 
 /**
  * @returns {array}
  */
-Quote.prototype.generate = function () {
+Quote.prototype.generate = config => {
   // destructuring values from config
-  let { currentType, num } = this.config;
+  let { type, num } = config;
 
   // new fragment
   let fragment = new Fragment();
 
   // choose fragment type
-  fragment.selectFragmentType(currentType);
+  fragment.selectFragmentType(type);
 
   /**
    * TODO: generate n number of quotes
    */
   return fragment.generateFragments(num);
-};
-
-Quote.prototype.configureQuote = () => {
-  // should be responsible for handling the form
 };
 
 

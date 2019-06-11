@@ -12,6 +12,10 @@ exports.hide = element => {
   element.classList.add("hidden");
 };
 
+exports.compareObjects = (obj1, obj2) =>
+    Object.keys(obj1).length === Object.keys(obj2).length &&
+    Object.keys(obj1).every(key => obj1[key] === obj2[key]);
+
 /**
  * @description adds elements to DOM
  * @param htmlString
@@ -59,12 +63,4 @@ exports.getRandom = (iter) => {
     throw new Error("Iterable is empty");
   }
   return iter[Math.floor(Math.random() * Math.floor(getLength(iter)))];
-};
-
-/**
- * @description does X
- * @param event
- */
-exports.customizeQuotes = config => {
-  // TODO: return a new config object or modify existing config object?
 };
