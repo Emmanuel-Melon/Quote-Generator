@@ -1,10 +1,10 @@
 .customization {
-  background: white;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   padding: $padding-large;
-  background-color: $primary-color;
+  background-image: linear-gradient(to left, darken($primary-color, 25%), #333);
   color: white;
   visibility: hidden;
+  width: 80%;
 }
 
 // mobile devices

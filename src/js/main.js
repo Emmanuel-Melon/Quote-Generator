@@ -65,10 +65,14 @@ generateButton.addEventListener("click", () => {
  * @return {{num: number, type: string}|*}
  */
 const setCustomConfig = options => {
+
   if(compareObjects(options, defaultConfig)) return defaultConfig;
   return options;
 };
 
+/**
+ * ! bug: quotes don't get generated unless you explicitly specify {type, num} from form
+ */
 customizeButton.addEventListener("click", () => {
 
   let options = {};

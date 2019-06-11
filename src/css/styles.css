@@ -156,12 +156,12 @@ legend {
 }
 
 .customization {
-  background: white;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   padding: 2.5em;
-  background-color: #739f3d;
+  background-image: linear-gradient(to left, #30431a, #333);
   color: white;
   visibility: hidden;
+  width: 80%;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
