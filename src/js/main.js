@@ -68,16 +68,13 @@ const setCustomConfig = options => {
   if(compareObjects(options, defaultConfig)) return defaultConfig;
   return options;
 };
+
 customizeButton.addEventListener("click", () => {
 
   let options = {};
 
-  console.log("before");
-  console.log(options);
-
   customization.addEventListener("click", (e) => {
-    console.log(e.target.value);
-    [options.type, options.num] = e.target.value;
+    options[e.target.name] = e.target.value;
   });
 
   // animate appearance of customization
@@ -87,6 +84,4 @@ customizeButton.addEventListener("click", () => {
   // returns a new custom config object
   // TODO: change values from UI
   customConfig = setCustomConfig(options);
-  console.log("after");
-  console.log(customConfig);
 });
