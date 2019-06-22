@@ -3,8 +3,20 @@
   padding: $padding-large;
   background-image: linear-gradient(to left, darken($primary-color, 25%), #333);
   color: white;
-  visibility: hidden;
+  display: none;
+  opacity: 1;
   width: 80%;
+  // transition: display 800ms, opacity 800ms;
+  p {
+    color: $secondary-color;
+    font-family: $primary-font;
+  }
+}
+
+// what triggers this guy?
+.customization:default {
+  display: block;
+  opacity: 0.0;
 }
 
 // mobile devices

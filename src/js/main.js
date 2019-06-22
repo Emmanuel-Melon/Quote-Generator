@@ -31,7 +31,19 @@ let customConfig;
 /**
  * Main heading
  */
-quoteType.innerText = "Motivational Quotes";
+// quoteType.innerText = customConfig.type;
+// value doesn't change
+//   console.log(customConfig.type);
+//   quoteType.innerText = customConfig.type;
+console.log(config.type);
+if(customConfig) {
+  console.log("it's defined");
+  console.log(customConfig);
+  quoteType.innerText = customConfig.type;
+} else {
+  console.log("whew");
+  quoteType.innerText = config.type;
+}
 
 /**
  *
@@ -39,14 +51,14 @@ quoteType.innerText = "Motivational Quotes";
  * @returns {*}
  */
 const displayQuotes = (quotesArray) => {
-  return quotesArray.map(quote => {
-    return (
-        `<li class='quote'>
-            <p>${quote}</p>
-        </li>`
-    );
+  let quotes = "";
+  quotesArray.forEach(quote => {
+    // dynamically add class
+    quotes += `<li class="quote"><p>${quote}</p></li>`;
   });
+  return quotes;
 };
+
 
 /**
  * @description handles quote generation
@@ -64,8 +76,8 @@ generateButton.addEventListener("click", () => {
  * @param options
  * @return {{num: number, type: string}|*}
  */
-const setCustomConfig = options => {
-
+const setCustomConfig = (options = config) => {
+  // returns a boolean
   if(compareObjects(options, defaultConfig)) return defaultConfig;
   return options;
 };
@@ -82,7 +94,7 @@ customizeButton.addEventListener("click", () => {
   });
 
   // animate appearance of customization
-  customization.style.visibility = "visible";
+  customization.style.display = "block";
   // extract num and type from customization
 
   // returns a new custom config object

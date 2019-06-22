@@ -10,6 +10,15 @@ imports
 /* typography */
 /* buttons */
 /* UI controls */
+html, body {
+  height: 100%;
+  overflow: auto;
+}
+
+body {
+  min-height: 100%;
+}
+
 /* centered */
 .centered {
   display: flex;
@@ -30,12 +39,12 @@ html, body, section aside, main {
 /* typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
-  font-family: "Adamina", Arial, Helvetica, sans-serif;
+  font-family: "Pacifico", Arial, Helvetica, sans-serif;
 }
 
 p, li, label, blockquote, button, legend {
   font-weight: 400;
-  font-family: "Dosis", Arial, Helvetica, sans-serif;
+  font-family: "Questrial", Arial, Helvetica, sans-serif;
   font-size: 18px;
   text-decoration: none;
 }
@@ -46,6 +55,7 @@ blockquote {
 
 ul {
   list-style-type: none;
+  padding: 0;
 }
 
 h4 {
@@ -65,9 +75,10 @@ h4 {
 .main-heading:after {
   display: block;
   content: "";
-  width: 35px;
+  width: 45px;
   border-bottom: solid 0.2em #739f3d;
   border-radius: 0.2em;
+  margin: 0 auto;
 }
 
 .text-center {
@@ -119,10 +130,9 @@ legend {
 }
 /* button */
 .button {
-  width: 150px;
-  padding: 0.5em;
+  width: 48%;
+  padding: 0.6em;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  margin: 0.2em;
   transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -140,13 +150,13 @@ legend {
   background: #54831c;
 }
 
-.ghost {
+.light {
   border: solid 0.1em #f0f1dc;
   background: #f0f1dc;
   color: #ee693f;
 }
 
-.ghost:hover {
+.light:hover {
   background: #ee693f;
   color: #f0f1dc;
 }
@@ -160,8 +170,18 @@ legend {
   padding: 2.5em;
   background-image: linear-gradient(to left, #30431a, #333);
   color: white;
-  visibility: hidden;
+  display: none;
+  opacity: 1;
   width: 80%;
+}
+.customization p {
+  color: #ee693f;
+  font-family: "Pacifico", Arial, Helvetica, sans-serif;
+}
+
+.customization:default {
+  display: block;
+  opacity: 0;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -264,6 +284,7 @@ legend {
 #content {
   background-image: url(../../public/img/leaves.png);
   flex: 2;
+  height: 100%;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -285,6 +306,7 @@ legend {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   flex: 1;
   padding: 2.5em;
+  height: 100%;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -301,6 +323,7 @@ legend {
 /* wrapper */
 #wrapper {
   display: flex;
+  height: 100%;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {

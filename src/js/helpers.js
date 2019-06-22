@@ -12,6 +12,12 @@ exports.hide = element => {
   element.classList.add("hidden");
 };
 
+/**
+ *
+ * @param obj1
+ * @param obj2
+ * @return {boolean}
+ */
 exports.compareObjects = (obj1, obj2) =>
     Object.keys(obj1).length === Object.keys(obj2).length &&
     Object.keys(obj1).every(key => obj1[key] === obj2[key]);

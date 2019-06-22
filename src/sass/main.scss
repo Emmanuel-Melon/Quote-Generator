@@ -4,10 +4,12 @@ imports
 @import 'utils/mixins';
 @import 'utils/variables';
 
+// base
 @import 'base/base';
 @import 'base/reset';
 @import 'base/typography';
 
+// components
 @import 'components/buttons';
 @import 'components/customization';
 @import 'components/forms';
@@ -15,9 +17,10 @@ imports
 @import 'components/media';
 @import 'components/modals';
 
+// layout
 @import 'layout/content';
 @import 'layout/sidebar';
 @import 'layout/wrapper';
 
-// google maps!
+// pages
 @import 'pages/home';

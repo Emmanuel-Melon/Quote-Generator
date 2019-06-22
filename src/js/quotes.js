@@ -33,5 +33,4 @@ Quote.prototype.generate = config => {
   return fragment.generateFragments(num);
 };
 
-
 export default Quote;

@@ -65,7 +65,7 @@ const Fragment = function () {
 
 /**
  * @description - Specifies the type of quotes in this context
- * @param type - a string indicating the type of quotes
+ * @param quoteType - a string indicating the type of quotes
  * @returns {*}
  */
 Fragment.prototype.selectFragmentType = function (quoteType) {
