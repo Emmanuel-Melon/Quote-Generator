@@ -43,5 +43,7 @@
   },
   "dependencies": {
     "file-loader": "^3.0.1"
-  }
+  },
+  "engines": {
+    "node": 10
 }
