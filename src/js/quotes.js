@@ -10,27 +10,31 @@ import Fragment from "./fragments";
  * @description creates new quote objects with specified config
  * @constructor
  */
-function Quote () {
-
-};
+function Quote(config) {
+  const { num, type } = config;
+  this.num = num; // default
+  this.type = type;
+}
 
 /**
  * @returns {array}
  */
-Quote.prototype.generate = config => {
-  // destructuring values from config
-  let { type, num } = config;
-
+Quote.prototype.generate = function() {
   // new fragment
-  let fragment = new Fragment();
+  const options = { 
+    num: this.num,
+    type: this.type
+  }
+  const fragment = new Fragment(options);
 
   // choose fragment type
-  fragment.selectFragmentType(type);
+  fragment.selectFragmentType();
 
-  /**
-   * TODO: generate n number of quotes
-   */
-  return fragment.generateFragments(num);
+  // generates num random quotes
+  return fragment.generateFragments();
 };
 
 export default Quote;
+
+
+// event delegation

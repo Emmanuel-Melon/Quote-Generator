@@ -19,7 +19,7 @@
           <div class="centered info-image">
             <div class="img-container">
               <img src="./public/img/minimum.jpg" data-src="./public/img/normal.jpg" alt="a cartooned image of buddha" id="buddha" class="lazy"
-                   data-srcset="./public/img/minimum.jpg 2x ./public/img/low.jpg 1x"
+                  data-srcset="./public/img/minimum.jpg 2x ./public/img/low.jpg 1x"
               >
             </div>
           </div>
@@ -30,7 +30,7 @@
         <div id="controls">
           <div class="centered">
             <div>
-              <h2 class="sub-heading text-center" id="quoteType"></h2> <hr class="styled">
+              <h2 class="sub-heading text-center" id="quoteType"></h2>
               <p class="text-center">Generate a random quote</p>
               <button class="button active" id="generate">Generate</button>
               <button class="button light" id="customize">Customize</button>
@@ -51,14 +51,14 @@
             <div class="form-group">
               <p>Type of quotes</p>
               <label for="motivational">Motivational</label>
-              <input type=radio value="motivational" id="motivational" name="type">
+              <input type=radio value="motivational" id="motivational" name="type" checked>
               <label for="wisdom">Wisdom</label>
               <input type=radio value="wisdom" id="wisdom" name="type">
             </div>
             <div class="form-group">
               <p>Number of quotes</p>
               <label for="one">One</label>
-              <input type=radio value="1" id="one" name="num">
+              <input type=radio value="1" id="one" name="num" checked>
               <label for="two">Two</label>
               <input type=radio value="2" id="two" name="num">
               <label for="three">Three</label>
@@ -68,6 +68,7 @@
               <label for="five">Five</label>
               <input type=radio value="5" id="five" name="num">
             </div>
+            <button class="button light save" id="save">Save</button>
         </div>
       </div>
       <ul id="quotes">

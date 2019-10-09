@@ -14,43 +14,44 @@ let customization = document.querySelector("#customization");
  * @type {Config}
  */
 const defaultConfig = {
-  num: 1,
-  type: "motivational"
+  heading: "Motivational",
+  num: document.querySelector("input[name = num]:checked").value,
+  type: document.querySelector("input[name = type]:checked").value
 };
 
-function Config ({ num, type } = defaultConfig) {
+function Config({ heading, num, type } = defaultConfig) {
+  this.heading = heading.toUpperCase();
   this.num = num;
   this.type = type;
-};
-
-// new config object
-let config = new Config();
-let customConfig;
-
+}
 
 /**
- * Main heading
+ * set heading
  */
-// quoteType.innerText = customConfig.type;
-// value doesn't change
-//   console.log(customConfig.type);
-//   quoteType.innerText = customConfig.type;
-console.log(config.type);
-if(customConfig) {
-  console.log("it's defined");
-  console.log(customConfig);
-  quoteType.innerText = customConfig.type;
-} else {
-  console.log("whew");
-  quoteType.innerText = config.type;
-}
+Config.prototype.setHeading = function() {
+  quoteType.innerText = this.heading;
+};
+
+/**
+ * set custon config
+ */
+Config.prototype.setCustomConfig = function() {
+  this.num = document.querySelector("input[name = num]:checked").value;
+  this.type = document.querySelector("input[name = type]:checked").value;
+  this.heading = this.type.toUpperCase();
+};
+
+// new default config object
+let config = new Config();
+// set default heading
+config.setHeading();
 
 /**
  *
  * @param quotesArray
  * @returns {*}
  */
-const displayQuotes = (quotesArray) => {
+const displayQuotes = quotesArray => {
   let quotes = "";
   quotesArray.forEach(quote => {
     // dynamically add class
@@ -59,45 +60,47 @@ const displayQuotes = (quotesArray) => {
   return quotes;
 };
 
-
 /**
  * @description handles quote generation
  */
 generateButton.addEventListener("click", () => {
-  let generatedQuotes;
-  let newQuote = new Quote();
-  // displays default config if no custom config is provided
-  (typeof customConfig === "undefined") ? generatedQuotes = newQuote.generate(config) : generatedQuotes = newQuote.generate(customConfig);
+  // set custom config
+  config.setCustomConfig();
+  let newQuote = new Quote(config);
+  const generatedQuotes = newQuote.generate();
+
+  // add class visible
+  // customization.style.display = "block";
   quotes.innerHTML = displayQuotes(generatedQuotes);
 });
 
 /**
- * @description compares options to default config, returns options if changes were made
- * @param options
- * @return {{num: number, type: string}|*}
- */
-const setCustomConfig = (options = config) => {
-  // returns a boolean
-  if(compareObjects(options, defaultConfig)) return defaultConfig;
-  return options;
-};
-
-/**
- * ! bug: quotes don't get generated unless you explicitly specify {type, num} from form
+ * @description customizes quote numbers and types
  */
 customizeButton.addEventListener("click", () => {
-
+  const saveButton = document.querySelector("#save");
   let options = {};
 
-  customization.addEventListener("click", (e) => {
+  customization.addEventListener("click", e => {
     options[e.target.name] = e.target.value;
   });
 
-  // animate appearance of customization
+  // remove hidden class
   customization.style.display = "block";
-  // extract num and type from customization
 
-  // returns a new custom config object
-  // TODO: change values from UI
-  customConfig = setCustomConfig(options);
+  saveButton.addEventListener("click", () => {
+    // set custom config
+    config.setCustomConfig(options);
+
+    // set new heading
+    config.setHeading();
+
+    // generate new quotes
+    const newQuote = new Quote(config);
+    const generatedQuotes = newQuote.generate();
+    quotes.innerHTML = displayQuotes(generatedQuotes);
+
+    // hide after saving config
+    customization.style.display = "none";
+  });
 });

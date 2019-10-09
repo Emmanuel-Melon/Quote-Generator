@@ -29,20 +29,8 @@ const fragments = {
     ]
   },
   wisdom: {
-    begin: [
-        "you are",
-        "life is",
-        "vision",
-        "success is",
-        "today is"
-    ],
-    mid: [
-      "what",
-      "nothing but",
-      "hard but",
-      "a present",
-      "a real goal"
-    ],
+    begin: ["You are", "Life is", "Vision", "Success is", "Today is"],
+    mid: ["what", "nothing but", "hard but", "a present", "a real goal"],
     end: [
       "you eat",
       "you make it",
@@ -58,9 +46,11 @@ const fragments = {
  * @constructor
  * @return {object}
  */
-const Fragment = function () {
+const Fragment = function({ num, type}) {
   this.fragments = fragments || {};
   this.currentType = null;
+  this.num = num;
+  this.type = type;
 };
 
 /**
@@ -68,9 +58,9 @@ const Fragment = function () {
  * @param quoteType - a string indicating the type of quotes
  * @returns {*}
  */
-Fragment.prototype.selectFragmentType = function (quoteType) {
-  if (quoteType === "motivational" || quoteType === "wisdom") {
-    this.currentType = quoteType;
+Fragment.prototype.selectFragmentType = function() {
+  if (this.type === "motivational" || this.type === "wisdom") {
+    this.currentType = this.type;
   } else {
     throw new Error("quotes could only be motivational or wisdom only");
   }
@@ -81,13 +71,17 @@ Fragment.prototype.selectFragmentType = function (quoteType) {
  * @param {number} num - a number representing currentNumber
  * @return {array} fragments - an array representing fragments
  */
-Fragment.prototype.generateFragments = function (num) {
-  if (num < 1 || num > 5) {
+Fragment.prototype.generateFragments = function() {
+  if (this.num < 1 || this.num > 5) {
     throw new Error("invalid range for num. Must be between 1 and 5");
   } else {
     let quotes = [];
-    for(let i = 0; i < num; i++) {
-      quotes[i] = `${getRandom(this.fragments[this.currentType].begin)} ${getRandom(this.fragments[this.currentType].mid)} ${getRandom(this.fragments[this.currentType].end)}`;
+    for (let i = 0; i < this.num; i++) {
+      quotes[i] = `${getRandom(
+        this.fragments[this.currentType].begin
+      )} ${getRandom(this.fragments[this.currentType].mid)} ${getRandom(
+        this.fragments[this.currentType].end
+      )}`;
     }
     return quotes;
   }

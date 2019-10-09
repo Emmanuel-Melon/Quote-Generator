@@ -1,10 +1,20 @@
 /* typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 900;
   font-family: $primary-font;
 }
 
-p, li, label, blockquote, button, legend {
+p,
+li,
+label,
+blockquote,
+button,
+legend {
   font-weight: 400;
   font-family: $secondary-font;
   font-size: $font-size;
@@ -51,12 +61,6 @@ h4 {
   color: $headings-color;
 }
 
-.styled {
-  height: 6px;
-  background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
-  border: 0;
-}
-
 .info {
   text-align: center;
   color: $white;
@@ -67,7 +71,6 @@ legend {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-
   //CSS
   #main-heading {
     font-size: 16px;
@@ -81,12 +84,10 @@ legend {
   .version {
     display: none;
   }
-
 }
 
 // tablet
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
   //CSS
   // more padding and center content
   // reduce font size

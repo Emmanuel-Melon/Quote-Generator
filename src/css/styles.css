@@ -37,12 +37,22 @@ html, body, section aside, main {
 }
 
 /* typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 900;
   font-family: "Pacifico", Arial, Helvetica, sans-serif;
 }
 
-p, li, label, blockquote, button, legend {
+p,
+li,
+label,
+blockquote,
+button,
+legend {
   font-weight: 400;
   font-family: "Questrial", Arial, Helvetica, sans-serif;
   font-size: 18px;
@@ -87,12 +97,6 @@ h4 {
 
 .sub-heading {
   color: #0d0d0d;
-}
-
-.styled {
-  height: 6px;
-  background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
-  border: 0;
 }
 
 .info {
@@ -143,7 +147,7 @@ legend {
 .active {
   background: #739f3d;
   border: solid 0.1em #739f3d;
-  color: #C9FFBF;
+  color: #c9ffbf;
 }
 
 .active:hover {
@@ -165,6 +169,10 @@ legend {
   cursor: pointer;
 }
 
+.save {
+  margin-top: 1em;
+}
+
 .customization {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   padding: 2.5em;
@@ -173,15 +181,11 @@ legend {
   display: none;
   opacity: 1;
   width: 80%;
+  transition: display 800ms;
 }
 .customization p {
   color: #ee693f;
   font-family: "Pacifico", Arial, Helvetica, sans-serif;
-}
-
-.customization:default {
-  display: block;
-  opacity: 0;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -218,19 +222,8 @@ legend {
   transition: border 450ms;
   transition-timing-function: ease-in-out;
 }
-.animated-form .form-group__leaf {
-  width: 60px;
-  height: 80px;
-  transition: transform 450ms, opacity 450ms;
-  transition-timing-function: ease-in-out;
-}
-.animated-form .form-group__leaf:hover {
-  transform: scale(1.4);
-  cursor: pointer;
-}
-.animated-form .form-group__leaf:checked {
-  opacity: 0.4;
-  border: solid 0.5em red;
+.animated-form .form-group__label {
+  color: maroon;
 }
 #buddha {
   height: auto;
