@@ -1,40 +1,30 @@
 .customization {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   padding: $padding-large;
   background-image: linear-gradient(to left, darken($primary-color, 25%), #333);
   color: white;
   display: none;
   opacity: 1;
   width: 80%;
-  // transition: display 800ms, opacity 800ms;
+  transition: display 800ms;
   p {
     color: $secondary-color;
     font-family: $primary-font;
   }
 }
 
-// what triggers this guy?
-.customization:default {
-  display: block;
-  opacity: 0.0;
-}
-
 // mobile devices
 @media (min-width: 320px) and (max-width: 480px) {
-
   //CSS
   .customization {
     padding: $padding-small;
   }
-
 }
 
 // tablets
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
   //CSS
   .customization {
     padding: $padding-medium;
   }
-
 }

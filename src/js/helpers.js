@@ -48,25 +48,33 @@ const isEmpty = data => {
 };
 
 /**
- * @description does X
+ * @description gets the length of an iterable
  * @param iter
  * @returns {number}
  */
 const getLength = iter => {
-  if(isEmpty(iter)) {
-    throw new Error("Iterable is empty");
-  }
+  try {
+    if (isEmpty(iter)) {
+      throw new Error("Iterable is empty");
+    }
     return iter.length;
+  } catch (error) {
+    return 'Cannot get iterable length'
+  }
 };
 
 /**
- * @description does X
+ * @description gets a random element from an iterable
  * @param iter
  * @returns {*}
  */
 exports.getRandom = (iter) => {
-  if(isEmpty(iter)) {
-    throw new Error("Iterable is empty");
+  try {
+    if (isEmpty(iter)) {
+      throw new Error("Iterable is empty");
+    }
+    return iter[Math.floor(Math.random() * Math.floor(getLength(iter)))];
+  } catch (error) {
+    return 'Failed to get random item from iterable'
   }
-  return iter[Math.floor(Math.random() * Math.floor(getLength(iter)))];
 };
