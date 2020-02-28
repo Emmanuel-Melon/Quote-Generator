@@ -1,9 +1,11 @@
 /* button */
 .button {
   width: $button-width;
-  padding: 0.6em;
+  padding: 0.5em;
+  margin: 0.2rem;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 0.4rem;
 }
 
 .button:focus {
@@ -11,8 +13,8 @@
 }
 
 .active {
+  border: solid 0.2rem #000000;
   background: $primary-color;
-  border: solid 0.1em #739f3d;
   color: #c9ffbf;
 }
 
@@ -21,7 +23,7 @@
 }
 
 .light {
-  border: solid 0.1em #f0f1dc;
+  border: solid 0.2rem $secondary-color;
   background: #f0f1dc;
   color: $secondary-color;
 }
@@ -37,4 +39,9 @@
 
 .save {
   margin-top: 1em;
+}
+
+.disabled {
+  opacity: 0.2;
+  pointer-events: none;
 }

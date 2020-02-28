@@ -1,81 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="author" content="Emmanuel-Melon">
-  <!-- custom styles -->
-  <link rel="stylesheet" href="./src/css/styles.css">
-  <!-- google fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Questrial|Pacifico" rel="stylesheet">
-  <link rel="icon" href="./favicon.ico" type="image/x-icon">
-</head>
-<body>
-  <main id="wrapper">
-    <aside id="sidebar">
-      <div>
-        <div id="info">
-          <div class="centered info-image">
-            <div class="img-container">
-              <img src="./public/img/minimum.jpg" data-src="./public/img/normal.jpg" alt="a cartooned image of buddha" id="buddha" class="lazy"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Emmanuel-Melon" />
+    <!-- custom styles -->
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Questrial|Pacifico"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <main id="wrapper">
+      <aside id="sidebar">
+        <div>
+          <div id="info">
+            <div class="info-image">
+              <div class="img-container">
+                <img
+                  src="./public/img/minimum.jpg"
+                  data-src="./public/img/normal.jpg"
+                  alt="a cartooned image of buddha"
+                  id="buddha"
+                  class="lazy"
                   data-srcset="./public/img/minimum.jpg 2x ./public/img/low.jpg 1x"
-              >
+                />
+              </div>
+            </div>
+          </div>
+          <div id="controls">
+            <div class="centered">
+              <div>
+                <h2 class="sub-heading text-center" id="quoteType"></h2>
+                <p class="text-center">Generate a random quote</p>
+                <button class="button active" id="generate">
+                  Generate Quotes
+                </button>
+                <button class="button light" id="customize">
+                  Customize Quotes
+                </button>
+              </div>
             </div>
           </div>
           <div class="centered version">
             <p>version 1.0.0</p>
           </div>
         </div>
-        <div id="controls">
-          <div class="centered">
-            <div>
-              <h2 class="sub-heading text-center" id="quoteType"></h2>
-              <p class="text-center">Generate a random quote</p>
-              <button class="button active" id="generate">Generate</button>
-              <button class="button light" id="customize">Customize</button>
-            </div>
+      </aside>
+      <section id="content">
+        <div class="centered">
+          <div>
+            <h1 class="main-heading" id="main-heading">
+              Random Quote Generator
+            </h1>
           </div>
         </div>
-      </div>
-    </aside>
-    <section id="content">
-      <div class="centered">
-        <div>
-          <h1 class="main-heading" id="main-heading">Random Quote Generator</h1>
-
-        </div>
-      </div>
-      <div class="centered">
-        <div class="customization" id="customization">
+        <div class="centered">
+          <div class="customization" id="customization">
             <div class="form-group">
               <p>Type of quotes</p>
               <label for="motivational">Motivational</label>
-              <input type=radio value="motivational" id="motivational" name="type" checked>
+              <input
+                type="radio"
+                value="motivational"
+                id="motivational"
+                name="type"
+                checked
+              />
               <label for="wisdom">Wisdom</label>
-              <input type=radio value="wisdom" id="wisdom" name="type">
+              <input type="radio" value="wisdom" id="wisdom" name="type" />
             </div>
             <div class="form-group">
               <p>Number of quotes</p>
               <label for="one">One</label>
-              <input type=radio value="1" id="one" name="num" checked>
+              <input type="radio" value="1" id="one" name="num" checked />
               <label for="two">Two</label>
-              <input type=radio value="2" id="two" name="num">
+              <input type="radio" value="2" id="two" name="num" />
               <label for="three">Three</label>
-              <input type=radio value="3" id="three" name="num">
+              <input type="radio" value="3" id="three" name="num" />
               <label for="four">Four</label>
-              <input type=radio value="4" id="four" name="num">
+              <input type="radio" value="4" id="four" name="num" />
               <label for="five">Five</label>
-              <input type=radio value="5" id="five" name="num">
+              <input type="radio" value="5" id="five" name="num" />
             </div>
             <button class="button light save" id="save">Save</button>
+          </div>
         </div>
-      </div>
-      <ul id="quotes">
-        <!-- quotes -->
-      </ul>
-    </section>
-  </main>
-  <!-- scripts -->
-</body>
+        <ul id="quotes">
+          <!-- quotes -->
+        </ul>
+      </section>
+    </main>
+    <!-- scripts -->
+  </body>
 </html>
