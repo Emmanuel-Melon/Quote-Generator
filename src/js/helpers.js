@@ -5,12 +5,12 @@
  */
 
 /**
- * @description does X
+ * @description hides an element from the DOM
  * @param element
  */
 exports.hide = element => {
-  element.classList.add("hidden");
-};
+  element.classList.add('hidden')
+}
 
 /**
  *
@@ -19,8 +19,8 @@ exports.hide = element => {
  * @return {boolean}
  */
 exports.compareObjects = (obj1, obj2) =>
-    Object.keys(obj1).length === Object.keys(obj2).length &&
-    Object.keys(obj1).every(key => obj1[key] === obj2[key]);
+  Object.keys(obj1).length === Object.keys(obj2).length &&
+    Object.keys(obj1).every(key => obj1[key] === obj2[key])
 
 /**
  * @description adds elements to DOM
@@ -28,24 +28,24 @@ exports.compareObjects = (obj1, obj2) =>
  * TODO: concatenate, don't append!
  */
 exports.append = (htmlString) => {
-  let fragment = document.createDocumentFragment();
-  let temp = document.createElement("div");
+  let fragment = document.createDocumentFragment()
+  let temp = document.createElement('div')
   // temp.className = "quote";
-  temp.innerHTML = htmlString;
-  while(temp.firstChild) {
-    fragment.appendChild(temp.firstChild);
+  temp.innerHTML = htmlString
+  while (temp.firstChild) {
+    fragment.appendChild(temp.firstChild)
   }
-  return fragment;
-};
+  return fragment
+}
 
 /**
- * @description does X
+ * @description checks whether a given data structure of type list is empty
  * @param data
  * @returns {boolean}
  */
 const isEmpty = data => {
-  return data.length === 0 || typeof data === undefined;
-};
+  return data.length === 0
+}
 
 /**
  * @description gets the length of an iterable
@@ -55,13 +55,13 @@ const isEmpty = data => {
 const getLength = iter => {
   try {
     if (isEmpty(iter)) {
-      throw new Error("Iterable is empty");
+      throw new Error('Iterable is empty')
     }
-    return iter.length;
+    return iter.length
   } catch (error) {
     return 'Cannot get iterable length'
   }
-};
+}
 
 /**
  * @description gets a random element from an iterable
@@ -71,10 +71,10 @@ const getLength = iter => {
 exports.getRandom = (iter) => {
   try {
     if (isEmpty(iter)) {
-      throw new Error("Iterable is empty");
+      throw new Error('Iterable is empty')
     }
-    return iter[Math.floor(Math.random() * Math.floor(getLength(iter)))];
+    return iter[Math.floor(Math.random() * Math.floor(getLength(iter)))]
   } catch (error) {
     return 'Failed to get random item from iterable'
   }
-};
+}
