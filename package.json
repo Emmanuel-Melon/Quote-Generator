@@ -42,7 +42,7 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
-    "file-loader": "^3.0.1"
+    "file-loader": "^6.0.0"
   },
   "engines": {
     "node": "8.15.1"
